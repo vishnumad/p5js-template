@@ -1,0 +1,21 @@
+{
+  "name": "p5-template",
+  "version": "1.0.0",
+  "description": "a template for p5js projects",
+  "author": "vishnu",
+  "license": "MIT",
+  "scripts": {
+    "start": "vite serve",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "p5": "1.4.1",
+    "simplex-noise": "3.0.1"
+  },
+  "devDependencies": {
+    "@types/p5": "1.4.2",
+    "typescript": "",
+    "vite": "2.9.14"
+  }
+}
