@@ -1,5 +1,5 @@
 import p5 from "p5";
-import SimplexNoise from "simplex-noise";
+import { createNoise3D } from "simplex-noise";
 
 const noiseScale = 0.025;
 const size = 25;
@@ -9,7 +9,7 @@ const sketch = function (p5: p5) {
   let w: number;
   let h: number;
 
-  const simplex = new SimplexNoise();
+  const simplex3D = createNoise3D();
 
   // Setup
   p5.setup = () => {
@@ -30,7 +30,7 @@ const sketch = function (p5: p5) {
         const xPos = x * size;
         const yPos = y * size;
 
-        const value = simplex.noise3D(x * noiseScale, y * noiseScale, offset);
+        const value = simplex3D(x * noiseScale, y * noiseScale, offset);
         const radius = p5.map(value, -1.0, 1.0, 10.0, 50.0);
         p5.circle(xPos, yPos, radius);
       }
